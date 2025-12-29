@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayrton Porto | Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="logo mono">AP.log</a>
+      <nav>
+        <a href="index.html">/root</a>
+        <a href="projects.html">/projects</a>
+        <a href="contact.html">/contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2 class="mono">> ./projects --list</h2>
+      <div class="blog-feed">
+
+        <!-- Project 1 -->
+        <article class="blog-post">
+          <span class="post-meta mono">Status: Active Development</span>
+          <h3 class="post-title">AVID Journal</h3>
+          <p>
+            Un framework de revisión automatizada para artículos matemáticos.
+            Integra un pipeline que transforma LaTeX a Coq/Lean, y utiliza LLMs para verificar la consistencia semántica
+            antes de la verificación formal total.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Coq</span>
+            <span class="tag">LLMs</span>
+          </div>
+          <br>
+          <a href="https://github.com/ayrtonporto/avid-journal" class="mono">git checkout repo -></a>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="blog-post">
+          <span class="post-meta mono">Status: Completed (Thesis)</span>
+          <h3 class="post-title">Dualities in Distributive Lattices</h3>
+          <p>
+            Tesis de Licenciatura.
+            Prueba de la dualidad (1,1) mediante funtores contravariantes entre categorías algebraicas y topológicas.
+            Enfoque en operadores monótonos y extensiones canónicas.
+          </p>
+          <div class="tags">
+            <span class="tag">Algebraic Logic</span>
+            <span class="tag">Topology</span>
+            <span class="tag">LaTeX</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="mono">EOF | © 2025 Ayrton Porto</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+/* Modern Academic / Digital Logic Theme */
+:root {
+  /* Color Palette */
+  --bg-dark: #0B0C10;
+  --bg-card: #1F2833;
+  --accent-cyan: #66FCF1;
+  --accent-muted: #45A29E;
+  --text-main: #C5C6C7;
+  --text-header: #FFFFFF;
+  --border-color: #2e3d4d;
+
+  /* Typography */
+  --font-serif: 'IBM Plex Serif', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --container-width: 900px;
+  --spacing-unit: 1rem;
+}
+
+/* Base Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Typography Utilities */
+h1,
+h2,
+h3,
+h4,
+.mono {
+  font-family: var(--font-mono);
+  color: var(--text-header);
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+a:hover {
+  color: var(--text-header);
+  text-shadow: 0 0 5px var(--accent-cyan);
+}
+
+/* Layout */
+header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 2rem 0;
+  background: rgba(11, 12, 16, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 1px solid var(--accent-cyan);
+  padding: 0.2rem 0.8rem;
+  box-shadow: 2px 2px 0 var(--accent-cyan);
+}
+
+nav a {
+  margin-left: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Main Content */
+section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Blog/Article Styles */
+.blog-feed {
+  display: grid;
+  gap: 3rem;
+}
+
+.blog-post {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 4px;
+  border-left: 3px solid var(--accent-cyan);
+  transition: transform 0.2s ease;
+}
+
+.blog-post:hover {
+  transform: translateX(5px);
+}
+
+.post-meta {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-muted);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.post-title {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(102, 252, 241, 0.1);
+  color: var(--accent-cyan);
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  margin-right: 0.5rem;
+}
+
+/* Intro/Hero Section */
+#intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-header);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-muted);
+}
+
+/* =========================================
+   Project Tabs & Themes
+   ========================================= */
+
+/* Tab Navigation */
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  opacity: 1;
+}
+
+.tab-btn.active {
+  opacity: 1;
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  background: rgba(102, 252, 241, 0.05);
+}
+
+/* Content Visibility */
+.project-content {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.project-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- THEME OVERRIDES --- */
+
+/* Theme: Magic: The Gathering (Purple/Gold) */
+.theme-mtg {
+  --accent-cyan: #9D50BB;
+  /* Purple */
+  --accent-muted: #6E48AA;
+  /* Darker Purple */
+}
+
+/* Specific overrides for MTG theme context */
+.theme-mtg .tab-btn.active {
+  border-color: #9D50BB;
+  color: #9D50BB;
+  background: rgba(157, 80, 187, 0.1);
+}
+
+.theme-mtg .blog-post {
+  border-left-color: #9D50BB;
+}
+
+.theme-mtg .tag {
+  background: rgba(157, 80, 187, 0.15);
+  color: #E0C3FC;
+}
+
+/* Theme: Mathematics (Blackboard/Chalk) */
+.theme-math {
+  --accent-cyan: #CCCCCC;
+  /* Chalk White */
+  --accent-muted: #888888;
+  /* Gray */
+  --bg-card: #141414;
+  /* Darker Blackboard */
+}
+
+.theme-math .tab-btn.active {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-math h2,
+.theme-math h3,
+.theme-math .post-title {
+  font-family: var(--font-serif);
+  /* More academic feel */
+  font-style: italic;
+}
+
+.theme-math .blog-post {
+  border-left: 1px dashed #FFFFFF;
+  /* Hand-drawn feel */
+}
+
+.theme-math .tag {
+  background: transparent;
+  border: 1px solid #777;
+  color: #ddd;
+}
