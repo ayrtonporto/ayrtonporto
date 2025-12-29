@@ -82,6 +82,72 @@ section {
   margin-bottom: 4rem;
 }
 
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+  background: #fdfdfd;
+}
+
+nav a,
+.dropbtn {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+nav a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #f0f0f0;
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border: 1px solid var(--border-color);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--text-main);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* Pipeline / AVID Journal Section */
 .pipeline-list {
   list-style: none;
@@ -117,7 +183,7 @@ section {
   color: var(--accent-color);
 }
 
-/* Projects Navigation Bar */
+/* Projects Navigation Bar (Legacy/Alternative) */
 .projects-nav {
   display: flex;
   gap: 1.5rem;
@@ -163,6 +229,11 @@ footer {
 
 /* Responsive */
 @media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .projects-nav {
     flex-direction: column;
     align-items: stretch;
