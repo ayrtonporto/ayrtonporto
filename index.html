@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
   <style>
     /* Modern Academic / Digital Logic Theme */
     :root {
@@ -319,45 +320,37 @@
       </p>
     </section>
 
-    <section id="featured">
-      <h2 class="mono">> ./research --featured</h2>
-      <article class="blog-post">
-        <h3 class="post-title">AVID Journal Framework</h3>
-        <p>
-          AVID Journal is an automated framework designed to assist in the peer-review process of mathematical
-          literature. It implements a rigorous 6-Phase Pipeline to ensure semantic consistency and novelty.
-        </p>
+    <section id="journal">
+      <h2 class="mono">> ./journal --latest</h2>
 
-        <div style="margin-top: 2rem;">
-          <h4 class="mono" style="color:var(--accent-cyan); margin-bottom: 1rem;">Pipeline Execution Log:</h4>
-          <ul class="pipeline-list">
-            <li class="pipeline-item">
-              <span class="pipeline-title">1. Ingestion</span>
-              Raw .tex file processing and metadata extraction.
-            </li>
-            <li class="pipeline-item">
-              <span class="pipeline-title">2. Structural Parsing</span>
-              Semantic segmentation of definitions, theorems, and lemmas.
-            </li>
-            <li class="pipeline-item">
-              <span class="pipeline-title">3. Formal Translation</span>
-              Neural-driven mapping of natural language into Coq/Lean code.
-            </li>
-            <li class="pipeline-item">
-              <span class="pipeline-title">4. Formal Verification</span>
-              Logical validation via Proof Checkers (Coq/Rocq).
-            </li>
-            <li class="pipeline-item">
-              <span class="pipeline-title">5. Novelty Evaluation</span>
-              Embedding-based redundancy detection.
-            </li>
-            <li class="pipeline-item">
-              <span class="pipeline-title">6. Publication</span>
-              Generation of verification metrics and formal validation reports.
-            </li>
-          </ul>
-        </div>
-      </article>
+      <!-- Terminal Log List -->
+      <ul class="terminal-log-list">
+
+        <!-- Post 1: AVID -->
+        <li class="log-entry">
+          <span class="log-date">[2025-12-29]</span>
+          <span class="log-status">NEW_LOG:</span>
+          <span class="log-summary">Ingestion phase testing in AVID Journal. Successfully parsed 500+ docs.</span>
+          <a href="project_avid.html#logs" class="read-more">[Read Log]</a>
+        </li>
+
+        <!-- Post 2: MTG -->
+        <li class="log-entry">
+          <span class="log-date">[2025-12-20]</span>
+          <span class="log-status">ANALYSIS:</span>
+          <span class="log-summary">Cluster Analysis of the Legacy Metagame. t-SNE reveals distinct archetypes.</span>
+          <a href="project_mtg.html#logs" class="read-more">[Read Log]</a>
+        </li>
+
+        <!-- Post 3: LEAN -->
+        <li class="log-entry">
+          <span class="log-date">[2025-12-10]</span>
+          <span class="log-status">DEV_LOG:</span>
+          <span class="log-summary">Automating Duality Proofs in Lean 4. Custom `lattice_iso` tactic implemented.</span>
+          <a href="project_math.html#logs" class="read-more">[Read Log]</a>
+        </li>
+
+      </ul>
     </section>
 
     <section id="contact">

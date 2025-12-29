@@ -34,7 +34,7 @@
     </header>
 
     <main class="container">
-        <section>
+        <section id="theorems">
             <h2 class="mono">> ./projects --select "Lean 4"</h2>
             <p class="lead" style="color:#CCCCCC;">Algebraic Logic & Topology</p>
 
@@ -66,6 +66,25 @@
                 This work is part of a larger effort to digitize 20th-century order theory results, making them
                 accessible to AI-driven proof search algorithms.
             </p>
+        </section>
+
+        <section id="logs">
+            <h2 class="mono">> ./logs --filter "LEAN"</h2>
+            <div class="project-logs" style="border-color:#CCCCCC;">
+                <ul class="terminal-log-list" style="margin-top:0;">
+                    <li class="log-entry">
+                        <span class="log-date">[2025-12-10]</span>
+                        <span class="log-status" style="color:#CCCCCC;">DEV_LOG:</span>
+                        <strong>Automating Duality Proofs.</strong> Implemented custom `lattice_iso` tactic in Lean 4 to
+                        handle boilerplate isomorphism checks.
+                    </li>
+                    <li class="log-entry">
+                        <span class="log-date">[2025-12-01]</span>
+                        <span class="log-status" style="color:#CCCCCC;">VERIFIED:</span>
+                        Priestley Duality construction compiles.
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section>
