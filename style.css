@@ -276,3 +276,21 @@ footer {
   font-size: 0.8rem;
   color: var(--accent-muted);
 }
+
+/* Profile Page Styles */
+.profile-content {
+  margin-top: 2rem;
+}
+
+.bio-section {
+  margin-bottom: 2.5rem;
+}
+
+.bio-section h3 {
+  color: var(--accent-cyan);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+}

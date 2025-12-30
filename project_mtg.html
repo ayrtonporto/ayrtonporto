@@ -1,103 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: MTG Analytics | Ayrton Porto
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTG Analytics | Ayrton Porto</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-</head>
+<section id="analysis">
+    <h2 class="mono">> ./projects --select "MTG Data"</h2>
+    <p class="lead" style="color:#E0C3FC;">NLP & Clustering on Magic: The Gathering</p>
 
-<body>
+    <div class="blog-post" style="border-left-color: #9D50BB; margin-top:2rem;">
+        <h3 class="post-title">Overview</h3>
+        <p>
+            This project applies <strong>Natural Language Processing (NLP)</strong> and Unsupervised Learning
+            techniques to the complex dataset of "Magic: The Gathering" cards. The goal is to move beyond simple
+            color-based classification and understand the deep semantic relationships between deck archetypes.
+        </p>
+    </div>
+</section>
 
-    <header>
-        <div class="container header-content">
-            <a href="index.html" class="logo mono">AP.log</a>
-            <nav>
-                <a href="index.html">/root</a>
-                <div class="dropdown">
-                    <button class="dropbtn">/projects ▾</button>
-                    <div class="dropdown-content">
-                        <a href="project_avid.html">AVID Journal</a>
-                        <a href="project_mtg.html">MTG Data Analytics</a>
-                        <a href="project_math.html">Math & Lean 4</a>
-                    </div>
-                </div>
-                <a href="index.html#contact">/contact</a>
-            </nav>
-        </div>
-    </header>
+<section>
+    <h2 class="mono">> ./methodology --analyze</h2>
+    <div class="blog-post" style="border-left-color: #9D50BB;">
+        <p><strong>1. Data Extraction:</strong> Scraped 20,000+ unique card texts and tournament decklists.</p>
+        <p><strong>2. Vectorization:</strong> Utilized TF-IDF and Word2Vec to convert card rules text into
+            numerical vectors, capturing mechanics like "Counter target spell" or "Destroy creature".</p>
+        <p><strong>3. Dimensionality Reduction:</strong> Applied PCA and t-SNE to visualize the high-dimensional
+            card space, revealing distinct clusters of "Control", "Aggro", and "Combo" strategies that align
+            with game theory archetypes.</p>
+    </div>
 
-    <main class="container">
-        <section id="analysis">
-            <h2 class="mono">> ./projects --select "MTG Data"</h2>
-            <p class="lead" style="color:#E0C3FC;">NLP & Clustering on Magic: The Gathering</p>
+    <h3 class="mono" style="margin-top:2rem;">> ./results</h3>
+    <p style="border-left: 1px solid #9D50BB; padding-left: 1rem;">
+        The analysis revealed that in certain "Eternal" formats, the distinction between "Midrange" and
+        "Control" decks is topologically non-existent, suggesting a continuous spectrum of control rather than
+        discrete categories.
+    </p>
+</section>
 
-            <div class="blog-post" style="border-left-color: #9D50BB; margin-top:2rem;">
-                <h3 class="post-title">Overview</h3>
-                <p>
-                    This project applies <strong>Natural Language Processing (NLP)</strong> and Unsupervised Learning
-                    techniques to the complex dataset of "Magic: The Gathering" cards. The goal is to move beyond simple
-                    color-based classification and understand the deep semantic relationships between deck archetypes.
-                </p>
-            </div>
-        </section>
+<section id="logs">
+    <h2 class="mono">> ./logs --filter "MTG"</h2>
+    <div class="project-logs" style="border-color:#9D50BB;">
+        <ul class="terminal-log-list" style="margin-top:0;">
+            <li class="log-entry">
+                <span class="log-date">[2025-12-20]</span>
+                <span class="log-status" style="color:#E0C3FC;">ANALYSIS:</span>
+                <strong>Cluster Analysis of the Legacy Meta.</strong> t-SNE visualization shows "Delver" decks
+                form a central cluster, while "Combo" decks are topological outliers.
+            </li>
+            <li class="log-entry">
+                <span class="log-date">[2025-11-05]</span>
+                <span class="log-status" style="color:#E0C3FC;">SCRAPER:</span>
+                Scraped 20k cards from Scryfall API.
+            </li>
+        </ul>
+    </div>
+</section>
 
-        <section>
-            <h2 class="mono">> ./methodology --analyze</h2>
-            <div class="blog-post" style="border-left-color: #9D50BB;">
-                <p><strong>1. Data Extraction:</strong> Scraped 20,000+ unique card texts and tournament decklists.</p>
-                <p><strong>2. Vectorization:</strong> Utilized TF-IDF and Word2Vec to convert card rules text into
-                    numerical vectors, capturing mechanics like "Counter target spell" or "Destroy creature".</p>
-                <p><strong>3. Dimensionality Reduction:</strong> Applied PCA and t-SNE to visualize the high-dimensional
-                    card space, revealing distinct clusters of "Control", "Aggro", and "Combo" strategies that align
-                    with game theory archetypes.</p>
-            </div>
-
-            <h3 class="mono" style="margin-top:2rem;">> ./results</h3>
-            <p style="border-left: 1px solid #9D50BB; padding-left: 1rem;">
-                The analysis revealed that in certain "Eternal" formats, the distinction between "Midrange" and
-                "Control" decks is topologically non-existent, suggesting a continuous spectrum of control rather than
-                discrete categories.
-            </p>
-        </section>
-
-        <section id="logs">
-            <h2 class="mono">> ./logs --filter "MTG"</h2>
-            <div class="project-logs" style="border-color:#9D50BB;">
-                <ul class="terminal-log-list" style="margin-top:0;">
-                    <li class="log-entry">
-                        <span class="log-date">[2025-12-20]</span>
-                        <span class="log-status" style="color:#E0C3FC;">ANALYSIS:</span>
-                        <strong>Cluster Analysis of the Legacy Meta.</strong> t-SNE visualization shows "Delver" decks
-                        form a central cluster, while "Combo" decks are topological outliers.
-                    </li>
-                    <li class="log-entry">
-                        <span class="log-date">[2025-11-05]</span>
-                        <span class="log-status" style="color:#E0C3FC;">SCRAPER:</span>
-                        Scraped 20k cards from Scryfall API.
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="mono">> ./links --external</h2>
-            <a href="https://github.com/ayrtonporto/mtg-analysis" target="_blank" class="project-btn"
-                style="border-color:#9D50BB; color:#9D50BB;">View Repository -></a>
-        </section>
-
-    </main>
-
-    <footer>
-        <p class="mono">EOF | © 2025 Ayrton Porto</p>
-    </footer>
-
-</body>
-
-</html>
+<section>
+    <h2 class="mono">> ./links --external</h2>
+    <a href="https://github.com/ayrtonporto/mtg-analysis" target="_blank" class="project-btn"
+        style="border-color:#9D50BB; color:#9D50BB;">View Repository -></a>
+</section>

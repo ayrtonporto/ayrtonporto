@@ -1,123 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: AVID Journal | Ayrton Porto
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVID Journal | Ayrton Porto</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-</head>
+<section id="overview">
+    <h2 class="mono">> ./projects --select "AVID Journal"</h2>
+    <p class="lead" style="color:var(--accent-cyan);">Automated Verification & Integrity Device</p>
 
-<body>
+    <div class="blog-post" style="margin-top: 2rem;">
+        <h3 class="post-title">Project Overview</h3>
+        <p>
+            <strong>AVID Journal</strong> is an automated framework designed to assist in the peer-review
+            process of mathematical literature. It represents a novel approach to "Auto-formalization", aiming
+            to bridge the gap between unstructured LaTeX documents and formal verification systems.
+        </p>
+        <p>
+            The core challenge addressed by this project is the "Hallucination Problem" in LLMs when dealing
+            with strict logical syntax. By implementing a guided translation layer, AVID ensures that the
+            generated code is not only syntactically correct but semantically faithful to the original theorem.
+        </p>
+    </div>
+</section>
 
-    <header>
-        <div class="container header-content">
-            <a href="index.html" class="logo mono">AP.log</a>
-            <nav>
-                <a href="index.html">/root</a>
-                <div class="dropdown">
-                    <button class="dropbtn">/projects ▾</button>
-                    <div class="dropdown-content">
-                        <a href="project_avid.html">AVID Journal</a>
-                        <a href="project_mtg.html">MTG Data Analytics</a>
-                        <a href="project_math.html">Math & Lean 4</a>
-                    </div>
-                </div>
-                <a href="index.html#contact">/contact</a>
-            </nav>
-        </div>
-    </header>
+<section id="pipeline">
+    <h2 class="mono">> ./view --pipeline</h2>
+    <ul class="pipeline-list">
+        <li class="pipeline-item">
+            <span class="pipeline-title">1. Ingestion</span>
+            Raw .tex file processing and metadata extraction. We use custom parsers to strip non-semantic LaTeX
+            macros.
+        </li>
+        <li class="pipeline-item">
+            <span class="pipeline-title">2. Structural Parsing</span>
+            Semantic segmentation. Identifying Boundaries of Definitions, Theorems, Lemmas, and Proofs using a
+            finetuned BERT model.
+        </li>
+        <li class="pipeline-item">
+            <span class="pipeline-title">3. Formal Translation</span>
+            Neural-driven mapping. A Specialized LLM (based on CodeLlama) translates natural language math into
+            <strong>Coq</strong> or <strong>Lean 4</strong> code.
+        </li>
+        <li class="pipeline-item">
+            <span class="pipeline-title">4. Formal Verification</span>
+            The generated code is passed to the <strong>Rocq (Coq)</strong> prover. If the proof checks, the
+            theorem is marked as "Verified".
+        </li>
+        <li class="pipeline-item">
+            <span class="pipeline-title">5. Novelty Evaluation</span>
+            Embedding-based redundancy detection. We compare the vectorized theorem statement against a vector
+            database of the Mathlib library.
+        </li>
+        <li class="pipeline-item">
+            <span class="pipeline-title">6. Publication</span>
+            Generation of verification metrics and formal validation reports for human reviewers.
+        </li>
+    </ul>
+</section>
 
-    <main class="container">
-        <section id="overview">
-            <h2 class="mono">> ./projects --select "AVID Journal"</h2>
-            <p class="lead" style="color:var(--accent-cyan);">Automated Verification & Integrity Device</p>
+<section id="logs">
+    <h2 class="mono">> ./logs --filter "AVID"</h2>
+    <div class="project-logs">
+        <ul class="terminal-log-list" style="margin-top:0;">
+            <li class="log-entry">
+                <span class="log-date">[2025-12-29]</span>
+                <span class="log-status">NEW_LOG:</span>
+                Ingestion phase testing. Parsing accuracy at 94%.
+            </li>
+            <li class="log-entry">
+                <span class="log-date">[2025-12-15]</span>
+                <span class="log-status">INIT:</span>
+                Repo created. Environment set up with Coq and Lean 4.
+            </li>
+        </ul>
+    </div>
+</section>
 
-            <div class="blog-post" style="margin-top: 2rem;">
-                <h3 class="post-title">Project Overview</h3>
-                <p>
-                    <strong>AVID Journal</strong> is an automated framework designed to assist in the peer-review
-                    process of mathematical literature. It represents a novel approach to "Auto-formalization", aiming
-                    to bridge the gap between unstructured LaTeX documents and formal verification systems.
-                </p>
-                <p>
-                    The core challenge addressed by this project is the "Hallucination Problem" in LLMs when dealing
-                    with strict logical syntax. By implementing a guided translation layer, AVID ensures that the
-                    generated code is not only syntactically correct but semantically faithful to the original theorem.
-                </p>
-            </div>
-        </section>
-
-        <section id="pipeline">
-            <h2 class="mono">> ./view --pipeline</h2>
-            <ul class="pipeline-list">
-                <li class="pipeline-item">
-                    <span class="pipeline-title">1. Ingestion</span>
-                    Raw .tex file processing and metadata extraction. We use custom parsers to strip non-semantic LaTeX
-                    macros.
-                </li>
-                <li class="pipeline-item">
-                    <span class="pipeline-title">2. Structural Parsing</span>
-                    Semantic segmentation. Identifying Boundaries of Definitions, Theorems, Lemmas, and Proofs using a
-                    finetuned BERT model.
-                </li>
-                <li class="pipeline-item">
-                    <span class="pipeline-title">3. Formal Translation</span>
-                    Neural-driven mapping. A Specialized LLM (based on CodeLlama) translates natural language math into
-                    <strong>Coq</strong> or <strong>Lean 4</strong> code.
-                </li>
-                <li class="pipeline-item">
-                    <span class="pipeline-title">4. Formal Verification</span>
-                    The generated code is passed to the <strong>Rocq (Coq)</strong> prover. If the proof checks, the
-                    theorem is marked as "Verified".
-                </li>
-                <li class="pipeline-item">
-                    <span class="pipeline-title">5. Novelty Evaluation</span>
-                    Embedding-based redundancy detection. We compare the vectorized theorem statement against a vector
-                    database of the Mathlib library.
-                </li>
-                <li class="pipeline-item">
-                    <span class="pipeline-title">6. Publication</span>
-                    Generation of verification metrics and formal validation reports for human reviewers.
-                </li>
-            </ul>
-        </section>
-
-        <section id="logs">
-            <h2 class="mono">> ./logs --filter "AVID"</h2>
-            <div class="project-logs">
-                <ul class="terminal-log-list" style="margin-top:0;">
-                    <li class="log-entry">
-                        <span class="log-date">[2025-12-29]</span>
-                        <span class="log-status">NEW_LOG:</span>
-                        Ingestion phase testing. Parsing accuracy at 94%.
-                    </li>
-                    <li class="log-entry">
-                        <span class="log-date">[2025-12-15]</span>
-                        <span class="log-status">INIT:</span>
-                        Repo created. Environment set up with Coq and Lean 4.
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="links">
-            <h2 class="mono">> ./links --external</h2>
-            <a href="https://github.com/ayrtonporto/avid-journal" target="_blank" class="project-btn">View Repository
-                -></a>
-        </section>
-
-    </main>
-
-    <footer>
-        <p class="mono">EOF | © 2025 Ayrton Porto</p>
-    </footer>
-
-</body>
-
-</html>
+<section id="links">
+    <h2 class="mono">> ./links --external</h2>
+    <a href="https://github.com/ayrtonporto/avid-journal" target="_blank" class="project-btn">View Repository
+        -></a>
+</section>
