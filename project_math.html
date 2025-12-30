@@ -1,65 +1,106 @@
----
-layout: default
-title: Math & Lean 4 | Ayrton Porto
----
+<!DOCTYPE html>
+<html lang="en">
 
-<section id="theorems">
-    <h2 class="mono">> ./projects --select "Lean 4"</h2>
-    <p class="lead" style="color:#CCCCCC;">Algebraic Logic & Topology</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math & Lean 4 | Ayrton Porto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
 
-    <div class="blog-post" style="border-left: 1px dashed #FFFFFF; margin-top: 2rem;">
-        <h3 class="post-title">Research Focus</h3>
-        <p>
-            My work in Pure Mathematics focuses on <strong>Algebraic Logic</strong> and <strong>Duality
-                Theory</strong>. I am currently working on formalizing these results using the <strong>Lean
-                4</strong> theorem prover.
-        </p>
-    </div>
-</section>
+<body>
 
-<section>
-    <h2 class="mono">> ./theorems --list-verified</h2>
-    <ul class="pipeline-list" style="border-left-style: dashed; border-left-color: #CCCCCC;">
-        <li class="pipeline-item">
-            <span class="pipeline-title" style="color:#CCCCCC;">Priestley Duality</span>
-            Formal construction of the category of Priestley Spaces and its equivalence to Distributive
-            Lattices.
-        </li>
-        <li class="pipeline-item">
-            <span class="pipeline-title" style="color:#CCCCCC;">Canonical Extensions</span>
-            Proof of existence of canonical extensions for bounded distributive lattices with monotone
-            operators.
-        </li>
-    </ul>
-    <p style="margin-top: 1.5rem; color: #888;">
-        This work is part of a larger effort to digitize 20th-century order theory results, making them
-        accessible to AI-driven proof search algorithms.
-    </p>
-</section>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo mono">AP.log</a>
+            <nav>
+                <a href="index.html">/root</a>
+                <div class="dropdown">
+                    <button class="dropbtn">/projects ▾</button>
+                    <div class="dropdown-content">
+                        <a href="project_avid.html">AVID Journal</a>
+                        <a href="project_mtg.html">MTG Data Analytics</a>
+                        <a href="project_math.html">Math & Lean 4</a>
+                    </div>
+                </div>
+                <a href="index.html#contact">/contact</a>
+            </nav>
+        </div>
+    </header>
 
-<section id="logs">
-    <h2 class="mono">> ./logs --filter "LEAN"</h2>
-    <div class="project-logs" style="border-color:#CCCCCC;">
-        <ul class="terminal-log-list" style="margin-top:0;">
-            <li class="log-entry">
-                <span class="log-date">[2025-12-10]</span>
-                <span class="log-status" style="color:#CCCCCC;">DEV_LOG:</span>
-                <strong>Automating Duality Proofs.</strong> Implemented custom `lattice_iso` tactic in Lean 4 to
-                handle boilerplate isomorphism checks.
-            </li>
-            <li class="log-entry">
-                <span class="log-date">[2025-12-01]</span>
-                <span class="log-status" style="color:#CCCCCC;">VERIFIED:</span>
-                Priestley Duality construction compiles.
-            </li>
-        </ul>
-    </div>
-</section>
+    <main class="container">
+        <section id="theorems">
+            <h2 class="mono">> ./projects --select "Lean 4"</h2>
+            <p class="lead" style="color:#CCCCCC;">Algebraic Logic & Topology</p>
 
-<section>
-    <h2 class="mono">> ./links --external</h2>
-    <a href="https://github.com/ayrtonporto/lean-logic" target="_blank" class="project-btn"
-        style="border-color:#CCCCCC; color:#CCCCCC;">View Repository -></a>
-    <a href="https://github.com/ayrtonporto/math-papers" target="_blank" class="project-btn"
-        style="border-color:#CCCCCC; color:#CCCCCC; margin-left:1rem;">LaTeX Preprints -></a>
-</section>
+            <div class="blog-post" style="border-left: 1px dashed #FFFFFF; margin-top: 2rem;">
+                <h3 class="post-title">Research Focus</h3>
+                <p>
+                    My work in Pure Mathematics focuses on <strong>Algebraic Logic</strong> and <strong>Duality
+                        Theory</strong>. I am currently working on formalizing these results using the <strong>Lean
+                        4</strong> theorem prover.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="mono">> ./theorems --list-verified</h2>
+            <ul class="pipeline-list" style="border-left-style: dashed; border-left-color: #CCCCCC;">
+                <li class="pipeline-item">
+                    <span class="pipeline-title" style="color:#CCCCCC;">Priestley Duality</span>
+                    Formal construction of the category of Priestley Spaces and its equivalence to Distributive
+                    Lattices.
+                </li>
+                <li class="pipeline-item">
+                    <span class="pipeline-title" style="color:#CCCCCC;">Canonical Extensions</span>
+                    Proof of existence of canonical extensions for bounded distributive lattices with monotone
+                    operators.
+                </li>
+            </ul>
+            <p style="margin-top: 1.5rem; color: #888;">
+                This work is part of a larger effort to digitize 20th-century order theory results, making them
+                accessible to AI-driven proof search algorithms.
+            </p>
+        </section>
+
+        <section id="logs">
+            <h2 class="mono">> ./logs --filter "LEAN"</h2>
+            <div class="project-logs" style="border-color:#CCCCCC;">
+                <ul class="terminal-log-list" style="margin-top:0;">
+                    <li class="log-entry">
+                        <span class="log-date">[2025-12-10]</span>
+                        <span class="log-status" style="color:#CCCCCC;">DEV_LOG:</span>
+                        <strong>Automating Duality Proofs.</strong> Implemented custom `lattice_iso` tactic in Lean 4 to
+                        handle boilerplate isomorphism checks.
+                    </li>
+                    <li class="log-entry">
+                        <span class="log-date">[2025-12-01]</span>
+                        <span class="log-status" style="color:#CCCCCC;">VERIFIED:</span>
+                        Priestley Duality construction compiles.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="mono">> ./links --external</h2>
+            <a href="https://github.com/ayrtonporto/lean-logic" target="_blank" class="project-btn"
+                style="border-color:#CCCCCC; color:#CCCCCC;">View Repository -></a>
+            <a href="https://github.com/ayrtonporto/math-papers" target="_blank" class="project-btn"
+                style="border-color:#CCCCCC; color:#CCCCCC; margin-left:1rem;">LaTeX Preprints -></a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="mono">EOF | © 2025 Ayrton Porto</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,39 +1,371 @@
----
-layout: default
-title: Ayrton Porto | Mathematician & AI Researcher
----
+<!DOCTYPE html>
+<html lang="en">
 
-<section id="about">
-  <h2 class="mono">> ./whoami --brief</h2>
-  <p class="lead">Mathematician & AI Researcher | Formal Methods</p>
-  <p>
-    Specializing in Auto-formalization, LLMs, and Automated Theorem Proving.
-    <a href="{{ " /profile.html" | relative_url }}">[Read Full Profile]</a>
-  </p>
-</section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayrton Porto | Mathematician & AI Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <style>
+    /* Modern Academic / Digital Logic Theme */
+    :root {
+      /* Color Palette */
+      --bg-dark: #0B0C10;
+      --bg-card: #1F2833;
+      --accent-cyan: #66FCF1;
+      --accent-muted: #45A29E;
+      --text-main: #C5C6C7;
+      --text-header: #FFFFFF;
+      --border-color: #2e3d4d;
 
-<section id="journal">
-  <h2 class="mono">> ./journal --latest</h2>
+      /* Typography */
+      --font-serif: 'IBM Plex Serif', serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-  <!-- Terminal Log List -->
-  <ul class="terminal-log-list">
-    {% for post in site.posts %}
-    <li class="log-entry">
-      <span class="log-date">[{{ post.date | date: "%Y-%m-%d" }}]</span>
-      <span class="log-status">LOG:</span>
-      <span class="log-summary">{{ post.title }}</span>
-      <a href="{{ post.url | relative_url }}" class="read-more">[Read Log]</a>
-      <p class="post-excerpt" style="font-size: 0.9em; color: var(--text-main); margin-top: 0.5rem;">
-        {{ post.summary | default: post.excerpt | strip_html | truncatewords: 20 }}
+      /* Spacing */
+      --container-width: 900px;
+      --spacing-unit: 1rem;
+    }
+
+    /* Base Reset */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-serif);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Typography Utilities */
+    h1,
+    h2,
+    h3,
+    h4,
+    .mono {
+      font-family: var(--font-mono);
+      color: var(--text-header);
+    }
+
+    a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    a:hover {
+      color: var(--text-header);
+      text-shadow: 0 0 5px var(--accent-cyan);
+    }
+
+    /* Layout */
+    header {
+      border-bottom: 1px solid var(--border-color);
+      padding: 2rem 0;
+      background: rgba(11, 12, 16, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(5px);
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      border: 1px solid var(--accent-cyan);
+      padding: 0.2rem 0.8rem;
+      box-shadow: 2px 2px 0 var(--accent-cyan);
+    }
+
+    /* Navigation & Dropdown */
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a,
+    .dropbtn {
+      margin-left: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-main);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem 0;
+    }
+
+    nav a:hover,
+    .dropbtn:hover {
+      color: var(--accent-cyan);
+      text-shadow: 0 0 5px var(--accent-cyan);
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: var(--bg-card);
+      min-width: 220px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      border: 1px solid var(--accent-cyan);
+      border-radius: 4px;
+    }
+
+    .dropdown-content a {
+      color: var(--text-main);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      margin-left: 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgba(102, 252, 241, 0.1);
+      color: var(--text-header);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Main Content */
+    section {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .blog-feed {
+      display: grid;
+      gap: 3rem;
+    }
+
+    .blog-post {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 4px;
+      border-left: 3px solid var(--accent-cyan);
+      transition: transform 0.2s ease;
+    }
+
+    .blog-post:hover {
+      transform: translateX(5px);
+    }
+
+    .post-meta {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--accent-muted);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .post-title {
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(102, 252, 241, 0.1);
+      color: var(--accent-cyan);
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      margin-right: 0.5rem;
+    }
+
+    #intro h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      color: var(--text-header);
+    }
+
+    .pipeline-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1.5rem;
+      border-left: 2px solid var(--accent-muted);
+      margin-left: 1rem;
+    }
+
+    .pipeline-item {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pipeline-item::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      background: var(--bg-dark);
+      border: 2px solid var(--accent-cyan);
+      border-radius: 50%;
+      box-shadow: 0 0 5px var(--accent-cyan);
+    }
+
+    .pipeline-title {
+      font-weight: 700;
+      font-family: var(--font-mono);
+      display: block;
+      color: var(--accent-cyan);
+      margin-bottom: 0.3rem;
+    }
+
+    .project-btn {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--accent-cyan);
+      border: 1px solid var(--accent-cyan);
+      padding: 0.8rem 1.5rem;
+      transition: all 0.2s ease;
+      background: transparent;
+      margin-right: 1rem;
+      margin-top: 1rem;
+    }
+
+    .project-btn:hover {
+      background: rgba(102, 252, 241, 0.1);
+      box-shadow: 0 0 10px var(--accent-cyan);
+      color: var(--text-header);
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 0;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent-muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="logo mono">AP.log</a>
+      <nav>
+        <a href="index.html">/root</a>
+
+        <div class="dropdown">
+          <button class="dropbtn">/projects ▾</button>
+          <div class="dropdown-content">
+            <a href="project_avid.html">AVID Journal</a>
+            <a href="project_mtg.html">MTG Data Analytics</a>
+            <a href="project_math.html">Math & Lean 4</a>
+          </div>
+        </div>
+
+        <a href="#contact">/contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="about">
+      <h2 class="mono">> ./whoami</h2>
+      <p class="lead">Mathematician & AI Researcher | Formal Methods</p>
+      <p>
+        I am a Mathematician (B.S. from UNICEN, Argentina) specializing in the intersection of Large Language Models
+        (LLMs) and Automated Theorem Proving (ATP). My research focuses on auto-formalization: using neural models to
+        bridge the gap between natural language mathematics and formal verification systems like Lean 4 and Coq.
       </p>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
+    </section>
 
-<section id="contact">
-  <h2 class="mono">> ./contact --finger</h2>
-  <p class="contact-info">
-    Currently seeking PhD opportunities and research collaborations. Reach out via Email or LinkedIn.
-  </p>
-</section>
+    <section id="journal">
+      <h2 class="mono">> ./journal --latest</h2>
+
+      <!-- Terminal Log List -->
+      <ul class="terminal-log-list">
+
+        <!-- Post 1: AVID -->
+        <li class="log-entry">
+          <span class="log-date">[2025-12-29]</span>
+          <span class="log-status">NEW_LOG:</span>
+          <span class="log-summary">Ingestion phase testing in AVID Journal. Successfully parsed 500+ docs.</span>
+          <a href="project_avid.html#logs" class="read-more">[Read Log]</a>
+        </li>
+
+        <!-- Post 2: MTG -->
+        <li class="log-entry">
+          <span class="log-date">[2025-12-20]</span>
+          <span class="log-status">ANALYSIS:</span>
+          <span class="log-summary">Cluster Analysis of the Legacy Metagame. t-SNE reveals distinct archetypes.</span>
+          <a href="project_mtg.html#logs" class="read-more">[Read Log]</a>
+        </li>
+
+        <!-- Post 3: LEAN -->
+        <li class="log-entry">
+          <span class="log-date">[2025-12-10]</span>
+          <span class="log-status">DEV_LOG:</span>
+          <span class="log-summary">Automating Duality Proofs in Lean 4. Custom `lattice_iso` tactic implemented.</span>
+          <a href="project_math.html#logs" class="read-more">[Read Log]</a>
+        </li>
+
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2 class="mono">> ./contact --finger</h2>
+      <p class="contact-info">
+        Currently seeking PhD opportunities and research collaborations. Reach out via Email or LinkedIn.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="mono">EOF | © 2025 Ayrton Porto</p>
+  </footer>
+
+</body>
+
+</html>
