@@ -1,47 +1,75 @@
----
-layout: default
-title: Profile | Ayrton Porto
----
+<!DOCTYPE html>
+<html lang="en">
 
-<section id="profile">
-  <h2 class="mono">> ./whoami --verbose</h2>
-  
-  <div class="profile-content">
-    <p class="lead">Mathematician & AI Researcher | Formal Methods</p>
-    
-    <div class="bio-section">
-      <h3>Academic Background</h3>
-      <p>
-        I am a Mathematician (B.S. from UNICEN, Argentina) specializing in the intersection of Large Language Models
-        (LLMs) and Automated Theorem Proving (ATP). My research focuses on auto-formalization: using neural models to
-        bridge the gap between natural language mathematics and formal verification systems like Lean 4 and Coq.
-      </p>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Ayrton Porto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* Ensure consistent styling with index.html */
+        :root {
+            --bg-dark: #0B0C10;
+            --bg-card: #1F2833;
+            --accent-cyan: #66FCF1;
+            --accent-muted: #45A29E;
+            --text-main: #C5C6C7;
+            --text-header: #FFFFFF;
+            --border-color: #2e3d4d;
+            --font-serif: 'IBM Plex Serif', serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+            --container-width: 900px;
+        }
+    </style>
+</head>
 
-    <div class="bio-section">
-      <h3>Research Interests</h3>
-      <ul class="pipeline-list">
-        <li class="pipeline-item">
-          <span class="pipeline-title">Auto-formalization</span>
-          Translating informal mathematical text into formal logic (Lean/Isabelle).
-        </li>
-        <li class="pipeline-item">
-          <span class="pipeline-title">Neuro-Symbolic AI</span>
-          Combining neural networks with symbolic reasoning for robust theorem proving.
-        </li>
-        <li class="pipeline-item">
-          <span class="pipeline-title">Mathematical Databases</span>
-          Building distinct datasets for training models on mathematical reasoning (e.g., AVID).
-        </li>
-      </ul>
-    </div>
+<body>
 
-    <div class="bio-section">
-      <h3>Contact</h3>
-      <p>
-        Currently seeking PhD opportunities and research collaborations.
-      </p>
-      <!-- Add actual contact details or form here if desired -->
-    </div>
-  </div>
-</section>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo mono">AP.log</a>
+            <nav>
+                <a href="profile.html">/profile</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">/projects ▾</button>
+                    <div class="dropdown-content">
+                        <a href="project_avid.html">AVID Journal</a>
+                        <a href="project_mtg.html">MTG Data Analytics</a>
+                        <a href="project_math.html">Math & Lean 4</a>
+                    </div>
+                </div>
+
+                <a href="contact.html">/contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2 class="mono">> ./whoami</h2>
+            <p class="lead" style="color: var(--text-header); font-size: 1.25rem;">Mathematician & AI Researcher |
+                Formal Methods</p>
+            <p>
+                I am a Mathematician (B.S. from UNICEN, Argentina) specializing in the intersection of Large Language
+                Models
+                (LLMs) and Automated Theorem Proving (ATP). My research focuses on auto-formalization: using neural
+                models to
+                bridge the gap between natural language mathematics and formal verification systems like Lean 4 and Coq.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p class="mono" style="text-align: center; color: var(--accent-muted); font-size: 0.8rem; padding: 3rem 0;">EOF
+            | © 2025 Ayrton Porto</p>
+    </footer>
+
+</body>
+
+</html>
