@@ -37,17 +37,27 @@
         <section id="intro">
             <h2 class="mono">> ./projects --select "MTG Data"</h2>
             <p class="lead" style="color:#E0C3FC;">Data Analytics applied to Magic: The Gathering</p>
-            <div class="blog-post" style="border-left-color: #9D50BB; margin-top:2rem;">
-                <p>
-                    This line of work focuses on the use of data analysis and statistical modeling to study the
-                    Commander (EDH) format, with particular emphasis on identifying genuine card synergies, archetypal
-                    structure, and the effective relevance of cards within the metagame.
-                </p>
-                <p>
-                    Rather than reproducing existing tools, the goal is to correct and formalize prior approaches that
-                    lacked well-defined metrics, transforming them into analytical instruments that are interpretable,
-                    reproducible, and methodologically sound.
-                </p>
+
+            <div class="dashboard-card" style="margin-top: 2rem;">
+                <div class="card-content">
+                    <p>
+                        This line of work focuses on the use of data analysis and statistical modeling to study the
+                        Commander (EDH) format, with particular emphasis on identifying genuine card synergies,
+                        archetypal
+                        structure, and the effective relevance of cards within the metagame.
+                    </p>
+                    <p>
+                        Rather than reproducing existing tools, the goal is to correct and formalize prior approaches
+                        that
+                        lacked well-defined metrics, transforming them into analytical instruments that are
+                        interpretable,
+                        reproducible, and methodologically sound.
+                    </p>
+                </div>
+                <div class="card-image-wrapper">
+                    <img src="assets/mtg_card_intro.png" alt="MTG Data Intro" class="card-image"
+                        onerror="this.parentElement.innerHTML='<div class=\'img-placeholder mono\'>[IMG: mtg_card_intro.png]</div>'">
+                </div>
             </div>
         </section>
 
@@ -57,44 +67,40 @@
             <p class="mono" style="color: #9D50BB; margin-bottom: 1rem;">Metric-based reformulation of synergy analysis
                 in Commander</p>
 
-            <div class="blog-post" style="border-left-color: #9D50BB;">
-                <p>
-                    The pyEDHREC project existed previously as an EDHREC-inspired implementation, but it suffered from
-                    fundamental issues: unstable results, absence of explicit metrics, and limited explanatory power.
-                </p>
-                <p>
-                    The work presented here consists of a complete methodological renewal, introducing:
-                </p>
-                <ul class="pipeline-list">
-                    <li class="pipeline-item">
-                        <span class="pipeline-title">Formal Metrics</span>
-                        Modeling the probability of a card appearing conditional on a commander ($P(x|c)$).
-                    </li>
-                    <li class="pipeline-item">
-                        <span class="pipeline-title">Objective Criteria</span>
-                        Identifying informative card sets $I(c)$.
-                    </li>
-                    <li class="pipeline-item">
-                        <span class="pipeline-title">Extremal Measures</span>
-                        Using $p_{\max}$ to detect strong strategic dependencies.
-                    </li>
-                </ul>
-                <p>
-                    On top of this foundation, a card evaluation program was developed to:
-                </p>
-                <ul>
-                    <li>Classify how strong a card is in Commander from a statistical perspective.</li>
-                    <li>Identify cards with marginal or effectively no play in the format.</li>
-                    <li>Distinguish superficial popularity from actual structural impact in deck construction.</li>
-                </ul>
-                <p style="margin-top: 1rem; border-top: 1px dashed #2e3d4d; padding-top: 1rem;">
-                    <strong>Result:</strong> A stable, useful, and analytically rigorous tool, suitable for commander
-                    comparison, archetype analysis, and global evaluation of the EDH card pool.
-                </p>
-                <p class="mono" style="font-size: 0.9rem; color:#E0C3FC;">
-                    [STATUS: Active and Functional]<br>
-                    [CONTRIBUTION: Metric formalization, Objective evaluation, Irrelevance detection]
-                </p>
+            <div class="dashboard-card reverse">
+                <div class="card-content">
+                    <p>
+                        The pyEDHREC project existed previously as an EDHREC-inspired implementation, but it suffered
+                        from
+                        fundamental issues: unstable results, absence of explicit metrics, and limited explanatory
+                        power.
+                    </p>
+                    <p>
+                        The work presented here consists of a complete methodological renewal, introducing:
+                    </p>
+                    <ul class="pipeline-list">
+                        <li class="pipeline-item">
+                            <span class="pipeline-title">Formal Metrics</span>
+                            Modeling the probability of a card appearing conditional on a commander ($P(x|c)$).
+                        </li>
+                        <li class="pipeline-item">
+                            <span class="pipeline-title">Objective Criteria</span>
+                            Identifying informative card sets $I(c)$.
+                        </li>
+                        <li class="pipeline-item">
+                            <span class="pipeline-title">Extremal Measures</span>
+                            Using $p_{\max}$ to detect strong strategic dependencies.
+                        </li>
+                    </ul>
+                    <p class="mono" style="font-size: 0.9rem; color:#E0C3FC; margin-top: 1rem;">
+                        [STATUS: Active and Functional]<br>
+                        [CONTRIBUTION: Metric formalization]
+                    </p>
+                </div>
+                <div class="card-image-wrapper">
+                    <img src="assets/mtg_card_pyedhrec.png" alt="pyEDHREC Analysis" class="card-image"
+                        onerror="this.parentElement.innerHTML='<div class=\'img-placeholder mono\'>[IMG: mtg_card_pyedhrec.png]</div>'">
+                </div>
             </div>
         </section>
 
@@ -114,38 +120,47 @@
                     significant new insight beyond existing and well-documented approaches. Consequently, the project
                     was discontinued as a tool, but retained as a theoretical and methodological case study.
                 </p>
-                <p><strong>Ongoing and planned articles derived from this work analyze:</strong></p>
-                <ul class="pipeline-list">
-                    <li class="pipeline-item">
-                        <span class="pipeline-title">Structural Failure</span>
-                        Why clustering often fails to capture meaningful structure in EDH.
-                    </li>
-                    <li class="pipeline-item">
-                        <span class="pipeline-title">Information Loss</span>
-                        The loss of semantic information when decks are reduced to vectors.
-                    </li>
-                    <li class="pipeline-item">
-                        <span class="pipeline-title">Conditions for Utility</span>
-                        The conditions under which such methods could become genuinely informative.
-                    </li>
-                </ul>
-                <p class="mono" style="font-size: 0.9rem; color:#E0C3FC;">
-                    [STATUS: Closed as tool, Active as research]<br>
-                </p>
+                <div style="margin-top: 1.5rem; padding: 1rem; border: 1px dashed #2e3d4d; background: #1a1a1a;">
+                    <p class="mono" style="color: #66FCF1; margin-top: 0;">>> REFERENCE_RECOMMENDATION</p>
+                    <p>
+                        For the state-of-the-art in EDH deck clustering, referencing a project that utilizes the full
+                        EDHREC dataset:
+                    </p>
+                    <a href="https://luckypaper.co/resources/commander-map/" target="_blank"
+                        style="color: #E0C3FC; text-decoration: underline;">
+                        Lucky Paper's Commander Map ->
+                    </a>
+                </div>
             </div>
         </section>
 
         <section id="outlook">
             <h2 class="mono">> ./outlook --future</h2>
-            <p>This MTG Data Analytics line aims to:</p>
-            <ul style="list-style: none; padding-left: 0;">
-                <li style="margin-bottom: 0.5rem;"><span style="color:#9D50BB;">>></span> Develop explanatory,
-                    metric-driven tools rather than purely descriptive ones.</li>
-                <li style="margin-bottom: 0.5rem;"><span style="color:#9D50BB;">>></span> Produce technical articles on
-                    the limitations of popular data-analysis methods in complex games.</li>
-                <li style="margin-bottom: 0.5rem;"><span style="color:#9D50BB;">>></span> Contribute to a more rigorous
-                    understanding of the Commander metagame.</li>
-            </ul>
+
+            <div class="dashboard-card">
+                <div class="card-content">
+                    <p>This MTG Data Analytics line aims to:</p>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.5rem;"><span style="color:#9D50BB;">>></span> Develop explanatory,
+                            metric-driven tools rather than purely descriptive ones.</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color:#9D50BB;">>></span> Produce technical
+                            articles on
+                            the limitations of popular data-analysis methods in complex games.</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color:#9D50BB;">>></span> Contribute to a more
+                            rigorous
+                            understanding of the Commander metagame.</li>
+                    </ul>
+                    <p style="margin-top: 1rem; border-top: 1px solid #2e3d4d; padding-top: 1rem;">
+                        <span class="mono" style="color: #E0C3FC;">[CURRENTLY ANALYZING]:</span><br>
+                        We are currently applying these tools to analyze the <strong>CEDH (Competitive EDH)</strong>
+                        metagame.
+                    </p>
+                </div>
+                <div class="card-image-wrapper">
+                    <img src="assets/mtg_card_future.png" alt="Future Analysis" class="card-image"
+                        onerror="this.parentElement.innerHTML='<div class=\'img-placeholder mono\'>[IMG: mtg_card_future.png]</div>'">
+                </div>
+            </div>
         </section>
 
         <section>
