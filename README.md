@@ -5,9 +5,9 @@
 
 **Mathematician** — Autoformalization & Formal Methods
 
-[![Website](https://img.shields.io/badge/%F0%9F%8C%90_ayrtonporto.github.io-0B0C10?style=flat-square&labelColor=1F2833)](https://ayrtonporto.github.io)
-[![Email](https://img.shields.io/badge/%F0%9F%93%A7_ayrporto@gmail.com-0B0C10?style=flat-square&labelColor=1F2833)](mailto:ayrporto@gmail.com)
-[![X](https://img.shields.io/badge/%F0%9D%95%8F_@AyrPorto-0B0C10?style=flat-square&labelColor=1F2833)](https://x.com/AyrPorto)
+[![Website](https://img.shields.io/badge/ayrtonporto.github.io-0B0C10?style=flat-square&labelColor=1F2833&logo=githubpages&logoColor=white)](https://ayrtonporto.github.io)
+[![Email](https://img.shields.io/badge/ayrporto@gmail.com-0B0C10?style=flat-square&labelColor=1F2833&logo=gmail&logoColor=white)](mailto:ayrporto@gmail.com)
+[![X](https://img.shields.io/badge/@AyrPorto-0B0C10?style=flat-square&labelColor=1F2833&logo=x&logoColor=white)](https://x.com/AyrPorto)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0B0C10?style=flat-square&labelColor=1F2833&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ayrporto/)
 
 </div>
@@ -27,7 +27,7 @@ I work on **autoformalization**: translating human-written proofs into machine-c
 <p>
   <img src="https://skillicons.dev/icons?i=python,pytorch,latex,git&theme=dark" />
   <img src="https://img.shields.io/badge/Lean_4-0B0C10?style=for-the-badge&labelColor=1F2833" />
-  <img src="https://img.shields.io/badge/Coq_|_Rocq-0B0C10?style=for-the-badge&labelColor=1F2833" />
+  <img src="https://img.shields.io/badge/Coq_|_Rocq-0B0C10?style=for-the-badge&labelColor=1F2833&logo=coq&logoColor=white" />
 </p>
 
 ---
