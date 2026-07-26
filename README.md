@@ -27,15 +27,34 @@ I work on **autoformalization**: translating human-written proofs into machine-c
 
 ### Skills
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,pytorch,latex,git&theme=dark&perline=6" />
-  </a>
-</p>
-
-<p align="center">
-  <sub>Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; LaTeX &nbsp;·&nbsp; Git &nbsp;·&nbsp; Lean 4 &nbsp;·&nbsp; Coq / Rocq</sub>
-</p>
+<table align="center">
+<tr>
+  <td align="center" width="96">
+    <img src="https://skillicons.dev/icons?i=python&theme=dark" width="48" height="48" /><br/>
+    <sub>Python</sub>
+  </td>
+  <td align="center" width="96">
+    <img src="https://skillicons.dev/icons?i=pytorch&theme=dark" width="48" height="48" /><br/>
+    <sub>PyTorch</sub>
+  </td>
+  <td align="center" width="96">
+    <img src="https://skillicons.dev/icons?i=latex&theme=dark" width="48" height="48" /><br/>
+    <sub>LaTeX</sub>
+  </td>
+  <td align="center" width="96">
+    <img src="https://skillicons.dev/icons?i=git&theme=dark" width="48" height="48" /><br/>
+    <sub>Git</sub>
+  </td>
+  <td align="center" width="96">
+    <span style="font-size:36px;color:#66FCF1"><b>λ</b></span><br/>
+    <sub>Lean 4</sub>
+  </td>
+  <td align="center" width="96">
+    <span style="font-size:36px;color:#66FCF1"><b>∀</b></span><br/>
+    <sub>Coq / Rocq</sub>
+  </td>
+</tr>
+</table>
 
 ---
 
@@ -50,3 +69,7 @@ I work on **autoformalization**: translating human-written proofs into machine-c
 
 ### Projects
 
+<p align="center">
+  <img height="150em" src="https://github-readme-streak-stats.herokuapp.com/?user=ayrtonporto&theme=dark&background=0B0C10&border=1F2833&stroke=66FCF1&ring=66FCF1&fire=66FCF1&currStreakLabel=C5C6C7&sideLabels=C5C6C7&dates=45A29E" />
+  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ayrtonporto&layout=compact&theme=dark&title_color=66FCF1&text_color=C5C6C7&bg_color=0B0C10&border_color=1F2833&hide_border=true" />
+</p>
