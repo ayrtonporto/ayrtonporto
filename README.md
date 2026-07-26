@@ -59,7 +59,7 @@ I work on **autoformalization**: translating human-written proofs into machine-c
 ---
 
 <p align="center">
-  <b>Seeking a funded PhD position in AI + formal methods (2027)</b><br>
+  <b>Seeking a funded PhD position in AI + formal methods + Math (2027)</b><br>
   <a href="https://ayrtonporto.github.io/assets/cv_ayrton_porto.pdf">📄 Download CV</a>
   &nbsp;·&nbsp;
   <a href="mailto:ayrporto@gmail.com">📧 ayrporto@gmail.com</a>
