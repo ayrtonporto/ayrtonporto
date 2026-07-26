@@ -30,7 +30,7 @@ I work on **autoformalization**: translating human-written proofs into machine-c
   <td align="center" width="96"><img src="https://skillicons.dev/icons?i=pytorch&theme=dark" width="48" height="48"/><br><sub>PyTorch</sub></td>
   <td align="center" width="96"><img src="https://skillicons.dev/icons?i=latex&theme=dark" width="48" height="48"/><br><sub>LaTeX</sub></td>
   <td align="center" width="96"><img src="https://skillicons.dev/icons?i=git&theme=dark" width="48" height="48"/><br><sub>Git</sub></td>
-  <td align="center" width="96"><img src="https://img.shields.io/badge/Lean_4-0B0C10?style=for-the-badge&labelColor=1F2833" height="28"/><br><sub>Lean 4</sub></td>
+  <td align="center" width="96"><img src="https://img.shields.io/badge/Lean_4-0B0C10?style=for-the-badge&labelColor=1F2833&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fleanprover%2Flean4%2Fmaster%2Fdoc%2Flean_logo.svg&logoColor=white" height="28"/><br><sub>Lean 4</sub></td>
   <td align="center" width="96"><img src="https://img.shields.io/badge/Coq_|_Rocq-0B0C10?style=for-the-badge&labelColor=1F2833&logo=coq&logoColor=white" height="28"/><br><sub>Coq / Rocq</sub></td>
 </tr>
 </table>
