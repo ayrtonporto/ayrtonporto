@@ -5,10 +5,13 @@
 
 **Mathematician** — Autoformalization & Formal Methods
 
-[![Website](https://img.shields.io/badge/ayrtonporto.github.io-0B0C10?style=flat-square&labelColor=1F2833)](https://ayrtonporto.github.io)
-[![Email](https://img.shields.io/badge/ayrporto@gmail.com-0B0C10?style=flat-square&labelColor=1F2833&logo=gmail&logoColor=white)](mailto:ayrporto@gmail.com)
-[![X](https://img.shields.io/badge/@AyrPorto-0B0C10?style=flat-square&labelColor=1F2833&logo=x&logoColor=white)](https://x.com/AyrPorto)
-[![LinkedIn](https://img.shields.io/badge/ayrporto-0B0C10?style=flat-square&labelColor=1F2833&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ayrporto/)
+[🌐 ayrtonporto.github.io](https://ayrtonporto.github.io)
+&nbsp;·&nbsp;
+[📧 ayrporto@gmail.com](mailto:ayrporto@gmail.com)
+&nbsp;·&nbsp;
+[𝕏 @AyrPorto](https://x.com/AyrPorto)
+&nbsp;·&nbsp;
+[💼 LinkedIn](https://www.linkedin.com/in/ayrporto/)
 
 </div>
 
@@ -24,16 +27,15 @@ I work on **autoformalization**: translating human-written proofs into machine-c
 
 ### Skills
 
-<table>
-<tr>
-  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=python&theme=dark" width="48" height="48"/><br><sub>Python</sub></td>
-  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=pytorch&theme=dark" width="48" height="48"/><br><sub>PyTorch</sub></td>
-  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=latex&theme=dark" width="48" height="48"/><br><sub>LaTeX</sub></td>
-  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=git&theme=dark" width="48" height="48"/><br><sub>Git</sub></td>
-  <td align="center" width="96"><img src="https://img.shields.io/badge/Lean_4-0B0C10?style=for-the-badge&labelColor=1F2833&logo=https%3A%2F%2Fraw.githubusercontent.com%2Fleanprover%2Flean4%2Fmaster%2Fdoc%2Flean_logo.svg&logoColor=white" height="28"/><br><sub>Lean 4</sub></td>
-  <td align="center" width="96"><img src="https://img.shields.io/badge/Coq_|_Rocq-0B0C10?style=for-the-badge&labelColor=1F2833&logo=coq&logoColor=white" height="28"/><br><sub>Coq / Rocq</sub></td>
-</tr>
-</table>
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=python,pytorch,latex,git&theme=dark&perline=6" />
+  </a>
+</p>
+
+<p align="center">
+  <sub>Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; LaTeX &nbsp;·&nbsp; Git &nbsp;·&nbsp; Lean 4 &nbsp;·&nbsp; Coq / Rocq</sub>
+</p>
 
 ---
 
@@ -48,7 +50,3 @@ I work on **autoformalization**: translating human-written proofs into machine-c
 
 ### Projects
 
-<p align="center">
-  <img height="150em" src="https://github-readme-stats.vercel.app/api?username=ayrtonporto&show_icons=true&theme=dark&title_color=66FCF1&text_color=C5C6C7&bg_color=0B0C10&border_color=1F2833&icon_color=45A29E&hide_border=true"/>
-  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ayrtonporto&layout=compact&theme=dark&title_color=66FCF1&text_color=C5C6C7&bg_color=0B0C10&border_color=1F2833&hide_border=true"/>
-</p>
