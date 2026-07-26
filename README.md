@@ -46,11 +46,11 @@ I work on **autoformalization**: translating human-written proofs into machine-c
     <sub>Git</sub>
   </td>
   <td align="center" width="96">
-    <span style="font-size:36px;color:#66FCF1"><b>λ</b></span><br/>
+    <img src="https://raw.githubusercontent.com/ayrtonporto/ayrtonporto/master/assets/lean-badge.svg" width="48" height="48" /><br/>
     <sub>Lean 4</sub>
   </td>
   <td align="center" width="96">
-    <span style="font-size:36px;color:#66FCF1"><b>∀</b></span><br/>
+    <img src="https://raw.githubusercontent.com/ayrtonporto/ayrtonporto/master/assets/rocq-badge.svg" width="48" height="48" /><br/>
     <sub>Coq / Rocq</sub>
   </td>
 </tr>
@@ -69,7 +69,3 @@ I work on **autoformalization**: translating human-written proofs into machine-c
 
 ### Projects
 
-<p align="center">
-  <img height="150em" src="https://github-readme-streak-stats.herokuapp.com/?user=ayrtonporto&theme=dark&background=0B0C10&border=1F2833&stroke=66FCF1&ring=66FCF1&fire=66FCF1&currStreakLabel=C5C6C7&sideLabels=C5C6C7&dates=45A29E" />
-  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ayrtonporto&layout=compact&theme=dark&title_color=66FCF1&text_color=C5C6C7&bg_color=0B0C10&border_color=1F2833&hide_border=true" />
-</p>
